@@ -14,7 +14,7 @@ on:
         required: true
         type: string
     secrets:
-      GITHUB_TOKEN:
+      MY_GITHUB_TOKEN:
         required: true
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
 
       # - uses: peterjgrainger/action-create-branch@v2.0.1
       #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
       #   with:
       #     branch: 'update-v2'
 
@@ -62,7 +62,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           commit-message: upgrade go mods
           title: ${{ inputs.branch }}
           assignees: ${{ inputs.assignees }}
