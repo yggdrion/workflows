@@ -24,7 +24,7 @@ jobs:
       CGO_ENABLED: 0
       GIT_AUTHOR_NAME: ${{ inputs.username }}
       GIT_AUTHOR_EMAIL: ${{ inputs.email }}
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
       - name: Cleanup Workspace
